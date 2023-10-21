@@ -9,53 +9,54 @@ class SecondWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16 , vertical: 12),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 30,),
+          const SizedBox(height: 30,),
           Container(
                height: 100,
                width: 350,
                decoration: BoxDecoration(
                  borderRadius: BorderRadius.circular(25),
-                 color: Color(0xffE8E6ECFF).withOpacity(0.3),
+                 color: const Color(0xffe8e6ecff).withOpacity(0.3),
                ),
                child: Padding(
-                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
+                 padding: const EdgeInsets.all(12),
                  child: Row(
+                   mainAxisAlignment: MainAxisAlignment.center,
                    children: [
-                     ItemsOf2Page(IconImage: "assets/icons/heart.png", Title: "Heart Rate",Comment: "81BPM",),
+                     const ItemsOf2Page(IconImage: "assets/icons/heart.png", Title: "Heart Rate",Comment: "81BPM",),
                      Container(
-                       margin: EdgeInsets.symmetric(horizontal: 15),
+                       margin: const EdgeInsets.symmetric(horizontal: 15),
                        width: 2,
-                       color: Color(0xffD9D9D9),
+                       color: const Color(0xffD9D9D9),
                      ),
-                     ItemsOf2Page(IconImage: "assets/icons/list.png", Title: "To-do", Comment: "32,5%"),
+                     const ItemsOf2Page(IconImage: "assets/icons/list.png", Title: "To-do", Comment: "32,5%"),
                      Container(
-                       margin: EdgeInsets.symmetric(horizontal: 15),
+                       margin: const EdgeInsets.symmetric(horizontal: 15),
                        width: 2,
-                       color: Color(0xffD9D9D9),
+                       color: const Color(0xffD9D9D9),
                      ),
-                     ItemsOf2Page(IconImage: "assets/icons/Frame.png", Title: "Calo", Comment: "1000 Cal"),
+                     const ItemsOf2Page(IconImage: "assets/icons/Frame.png", Title: "Calo", Comment: "1000 Cal"),
                    ],
                  ),
                ),
              ),
-          SizedBox(height: 30,),
-          Text("Workout Progtams", style: TextStyle(
+          const SizedBox(height: 30,),
+          const Text("Workout Programs", style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 18,
           ),),
-          SizedBox(height: 40,),
+          const SizedBox(height: 40,),
           Expanded(
             child: ContainedTabBarView(
-              tabs: [
+              tabs: const [
                 Text('All Type', style: TextStyle(
                   color: Colors.black,
                 ),),
-                Text('Full Budy',style: TextStyle(
+                Text('Full Body',style: TextStyle(
                   color: Colors.black,
                 ),),
                 Text('Upper',style: TextStyle(
@@ -67,19 +68,19 @@ class SecondWidget extends StatelessWidget {
               ],
               views: [
                 ListView.builder(
-                  itemBuilder: (context, index) => WorkOutProgram(),
+                  itemBuilder: (context, index) => const WorkOutProgram(),
                   itemCount: 20,
                     ),
                 ListView.builder(
-                  itemBuilder: (context, index) => WorkOutProgram(),
+                  itemBuilder: (context, index) => const WorkOutProgram(),
                   itemCount: 20,
                 ),
                 ListView.builder(
-                  itemBuilder: (context, index) => WorkOutProgram(),
+                  itemBuilder: (context, index) => const WorkOutProgram(),
                   itemCount: 20,
                 ),
                 ListView.builder(
-                  itemBuilder: (context, index) => WorkOutProgram(),
+                  itemBuilder: (context, index) => const WorkOutProgram(),
                   itemCount: 20,
                 ),
               ],
